@@ -10,4 +10,4 @@
     register: result
     ignore_errors: True
    
-  - debug: var=displayif.stdout
+  - debug: var=result.stdout
