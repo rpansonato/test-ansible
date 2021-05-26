@@ -5,7 +5,9 @@
   become_method: sudo
   tasks:
 
-  - name: 0. Test | Check if firewalld is running
+  - name: 0. Test | List files
     command: ls -la /
     register: result
     ignore_errors: True
+   
+  - debug: var=displayif.stdout
